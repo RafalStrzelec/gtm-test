@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>XSS test</title>
+<script>
+document.cookie = "xss_test=<img/src=x/onerror=alert(1)>; path=/";
+document.cookie = "<b>xss_name</b>=1; path=/";
+</script>
+</head>
+<body><h1>Test escapowania HUB-a</h1></body>
+</html>
